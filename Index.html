@@ -1,25 +1,57 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class Solution {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+class Solution {
 
-        int N = scanner.nextInt();
-        scanner.close();
+    
 
-        int evenSum = 0;
-        int oddSum = 0;
+    public static void main(String args[]) {
 
-        while (N > 0) {
-            int digit = N % 10;
-            if (digit % 2 == 0) {
-                evenSum += digit;
-            } else {
-                oddSum += digit;
-            }
-            N /= 10;
+        
+
+        // Write code here
+
+        Scanner sc=new Scanner (System.in);
+
+        int n=sc.nextInt();
+
+        int fact=1;
+
+        if(n==0 || n==1)
+
+        {
+
+            System.out.println("1");
+
         }
 
-        System.out.println(evenSum + " " + oddSum);
+ 
+
+        else if(n<0)
+
+        {
+
+            System.out.println("Error");
+
+        }
+
+        else
+
+        {
+
+            for(int i=1;i<=n;i++)
+
+            {
+
+                fact=fact*i;
+
+            }
+
+            System.out.println(fact);
+
+        }
+
+        
+
     }
+
 }
